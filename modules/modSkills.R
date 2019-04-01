@@ -9,7 +9,7 @@ modSkills = function(id) {
     width = 12,
     elevation = 2,
     title = "IT Skills",
-    plotlyOutput(ns("skills_plot"), height = 280)
+    plotlyOutput(ns("skills_plot"), height = 250)
   )
 
 }

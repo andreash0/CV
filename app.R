@@ -36,43 +36,49 @@ shiny::shinyApp(
           icon = "id-card"
         ),
         bs4SidebarMenuItem(
-          "Item 2",
-          tabName = "item2",
+          "Code",
+          tabName = "tabCode",
           icon = "code"
         )
       )
     ),
     body = bs4DashBody(
       includeCSS("styles.css"),
-      fluidRow(
-        height = 800,
-        column(width= 5,
+      bs4TabItems(
+        bs4TabItem("tabCV",
           fluidRow(
-            style = "height:520px; 
-              margin-left: 10px;
-              margin-top: 10px;", 
-            modContant("idModCont")
-          ), 
-          fluidRow(
-            style = "height:520px; 
-            margin-left: 10px;
-            margin-top: 10px;", 
-            modSkills("idModSkills")
+            height = 800,
+            column(width= 5,
+              fluidRow(
+                style = "height:560px; 
+                  margin-left: 10px;
+                  margin-top: 10px;", 
+                modContant("idModCont")
+              ), 
+              fluidRow(
+                style = "height:480px; 
+                margin-left: 10px;
+                margin-top: 10px;", 
+                modSkills("idModSkills")
+              )
+            ),
+            column(
+              width= 7,
+              fluidRow(
+                style = "height:1060px; 
+                margin-left: 10px;
+                margin-top: 10px;", 
+                modExpEdu("idmModExpEdu")
+              )
+              
+            )
           )
         ),
-        column(
-          width= 7,
-          fluidRow(
-            style = "height:1050px; 
-            margin-left: 10px;
-            margin-top: 10px;", 
-            modExpEdu("idmModExpEdu")
-          )
-          
+        bs4TabItem("tabCode",
+          tags$h4("You can find the code for this app on my github account")
         )
       )
     )
-
   ),
   server = function(input, output) {
     callModule(modSkills_server, "idModSkills")

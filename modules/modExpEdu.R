@@ -10,7 +10,7 @@ modExpEdu = function(id) {
       side = "right",
       status = "primary",
       solidHeader = T,
-      height = 900,
+      height = 910,
       bs4TabPanel(
         tabName = "Experience",
         active = T,
@@ -28,12 +28,13 @@ modExpEdu = function(id) {
           timelineItem(
             title = "Project: Planning tool for marketing campaigns for Allianz Deutschland AG",
             time = "2018",
-            HTML("<ul>
+            div(class = "test", HTML("<ul>
                   <li>Development and programming of a BI-Tool, to enable a simplified and flexible sales planning process. 
                       The tool makes it easy to create and edit a diverse range of sales / marketing campaigns</li>
                   <li>Creation of a comprehensive dashboard which allows users to obtain a clear and flexible overview of the KPIs 
                       within the marketing campaigns.</li>
                   </ul>")
+            )
           ),
           timelineItem(
             title = "Student Assistant for Data Analytics and Machine Learning at LMU Munich",
