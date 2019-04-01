@@ -5,9 +5,9 @@ modContant = function(id) {
   tagList(
     bs4Card(
       status = "primary",
-      width = 4,
       solidHeader = TRUE,
       closable = FALSE,
+      width = 4,
       title = "Contact",
       cardProfile(
         src = "githubbild.jpg",
@@ -21,14 +21,19 @@ modContant = function(id) {
           ),
           cardProfileItem(
             title = icon("linkedin"),
-            description = a("Andreas Hofheinz", href="www.linkedin.com/in/andreas-hofheinz-3b686913b/", class = "float-right") 
+            description = a("Andreas Hofheinz", href="https://linkedin.com/in/andreas-hofheinz-3b686913b/", class = "float-right") 
           ),
           cardProfileItem(
             title = icon("map-marker-alt"),
             description = "Munich, Germany"
+          ),
+          cardProfileItem(
+            title = icon("futbol"),
+            description = "Football, Swimming, Traveling, Reading"
           )
         )
       )
     )
   )
 }
+

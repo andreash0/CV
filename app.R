@@ -1,7 +1,10 @@
 library(shiny)
 library(bs4Dash)
+library(shinydashboardPlus)
 
 source("modules/modContact.R")
+source("modules/modExpEdu.R")
+
 
 shiny::shinyApp(
   ui = bs4DashPage(
@@ -20,42 +23,19 @@ shiny::shinyApp(
       opacity = 0.8,
       bs4SidebarUserPanel(
         img = "https://image.flaticon.com/icons/svg/1149/1149168.svg",
-        text = "Welcome Onboard!"
+        text = "Build your CV with R Shiny!"
       ),
       bs4SidebarMenu(
         bs4SidebarHeader("Header 1"),
         bs4SidebarMenuItem(
-          "Item 1",
-          tabName = "item1",
-          icon = "sliders"
+          "CV",
+          tabName = "tabCV",
+          icon = "id-card"
         ),
         bs4SidebarMenuItem(
           "Item 2",
           tabName = "item2",
-          icon = "id-card"
-        )
-      )
-    ),
-    controlbar = bs4DashControlbar(
-      skin = "light",
-      title = "My right sidebar",
-      sliderInput(
-        inputId = "obs",
-        label = "Number of observations:",
-        min = 0,
-        max = 1000,
-        value = 500
-      ),
-      column(
-        width = 12,
-        align = "center",
-        radioButtons(
-          inputId = "dist",
-          label = "Distribution type:",
-          c("Normal" = "norm",
-            "Uniform" = "unif",
-            "Log-normal" = "lnorm",
-            "Exponential" = "exp")
+          icon = "code"
         )
       )
     ),
@@ -68,7 +48,12 @@ shiny::shinyApp(
     ),
     body = bs4DashBody(
       includeCSS("styles.css"),
-      modContant("idModCont") 
+      fluidRow(
+        modContant("idModCont"), 
+        modExpEdu("idmModExpEdu") 
+      ),
+      fluidRow(
+      )
     )
 
   ),
