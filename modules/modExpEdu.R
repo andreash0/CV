@@ -56,7 +56,7 @@ modExpEdu = function(id) {
               <li>Research with regards to new Data Analytics technologies </li>
             </ul>')
           ),
-          timelineLabel("......."),
+          timelineLabel(""),
           timelineStart()
         )
       ),

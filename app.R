@@ -75,22 +75,17 @@ shiny::shinyApp(
           )
         ),
         bs4TabItem("tabCode",
-          
-          bs4Jumbotron(),
-          
-          div(class = "myInfoBox",
-            bs4InfoBox(
-              class = "myInfoBoxContent",
-              title = HTML(
-                '<ul>
-                You can find the code for this app on my github
-                <a href="https://github.com/andreasho95/CV">account</a> ! 
-                </ul>'
-              ),
-              icon = "github"
-            )
-          )  
-        )
+          bs4Callout(
+            HTML(
+              'You can find the code for this shiny app on my github
+                <a href="https://github.com/andreasho95/CV"" style="color:blue;">account</a><br>
+               You are welcome to use and customize it!
+              '
+            ),
+            status = "success",
+            title = icon("github")
+          )
+        )   
       )
     )
         

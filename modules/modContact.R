@@ -9,7 +9,6 @@ modContant = function(id) {
       closable = FALSE,
       width = 12,
       elevation = 2,
-      #height = 480,
       title = "Contact",
       cardProfile(
         src = "githubbild.jpg",
