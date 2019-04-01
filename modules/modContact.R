@@ -7,7 +7,8 @@ modContant = function(id) {
       status = "primary",
       solidHeader = TRUE,
       closable = FALSE,
-      width = 4,
+      width = 12,
+      height = 530,
       title = "Contact",
       cardProfile(
         src = "githubbild.jpg",

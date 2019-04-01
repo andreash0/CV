@@ -1,9 +1,11 @@
 library(shiny)
 library(bs4Dash)
 library(shinydashboardPlus)
+library(plotly)
 
 source("modules/modContact.R")
 source("modules/modExpEdu.R")
+source("modules/modSkills.R")
 
 
 shiny::shinyApp(
@@ -39,25 +41,20 @@ shiny::shinyApp(
         )
       )
     ),
-    footer = bs4DashFooter(
-      copyrights = a(
-        href = "https://twitter.com/divadnojnarg",
-        target = "_blank", "@DivadNojnarg"
-      ),
-      right_text = "2018"
-    ),
     body = bs4DashBody(
       includeCSS("styles.css"),
-      fluidRow(
-        modContant("idModCont"), 
-        modExpEdu("idmModExpEdu") 
-      ),
-      fluidRow(
+        fluidRow(column(width= 5,
+
+          modContant("idModCont"), 
+         modSkills("idModSkills")
+        ),
+      column(width= 6,
+          modExpEdu("idmModExpEdu")
       )
-    )
+    ))
 
   ),
   server = function(input, output) {
-   
+    callModule(modSkills_server, "idModSkills")
   }
 )

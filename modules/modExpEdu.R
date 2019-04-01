@@ -6,7 +6,7 @@ modExpEdu = function(id) {
     bs4TabCard(
       title = "Experience and Education",
       elevation = 2,
-      width = 8,
+      width = 12,
       side = "right",
       status = "primary",
       solidHeader = T,
@@ -66,12 +66,22 @@ modExpEdu = function(id) {
             title = "Preparatory Year for Statistics Master at LMU Munich",
             icon = "university",
             time = "2018-2019",
-            HTML("<ul>
-              <li>Selected courses from Bachelor curriculum as preparation for Master studies.</li>
+            HTML("
+              <ul>
+                <li>Selected courses from Bachelor curriculum as preparation for Master studies:</li>
+                  <ul>
+                    <li>R Programming</li>
+                    <li>Generalized Linear Regression</li>
+                    <li>Linear Regression</li>
+                    <li>Statistics II</li>
+                    <li>Linear Algebra</li>
+                    <li>Calculus I and II</li>
+                    <li>Time Series Analysis</li>
+                  </ul>
               </ul>")
             ),
           timelineItem(
-            title = "Visiting Scholar for Data Science at the University of Illinois at Urbana-Champaign",
+            title = "Visiting Scholar for Data Science at the University of Illinois at Urbana-Champaign, USA",
             icon = "globe-americas",
             time = "2017",
             HTML('<ul>
