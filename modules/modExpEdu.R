@@ -10,6 +10,7 @@ modExpEdu = function(id) {
       side = "right",
       status = "primary",
       solidHeader = T,
+      height = 900,
       bs4TabPanel(
         tabName = "Experience",
         active = T,
@@ -21,6 +22,7 @@ modExpEdu = function(id) {
             time = "April 2018",
             HTML("<ul>
                   <li>IT consultancy enabling customers to transform raw data into meaningful insights using modern techniques and approaches.</li>
+                  <li>Based in Munich, Germany.</li>
                   </ul>")
           ),
           timelineItem(
@@ -80,6 +82,7 @@ modExpEdu = function(id) {
                   </ul>
               </ul>")
             ),
+          timelineLabel(2017),
           timelineItem(
             title = "Visiting Scholar for Data Science at the University of Illinois at Urbana-Champaign, USA",
             icon = "globe-americas",
@@ -90,7 +93,7 @@ modExpEdu = function(id) {
               <li>Statistical Analysis of Experimental Data</li>
               </ul>')
           ),
-          timelineItem(
+        timelineItem(
             title = "Bachelor of Science in Economics at LMU Munich",
             time = "2014-2017",
             icon = "university",
@@ -99,7 +102,8 @@ modExpEdu = function(id) {
               <li>Thesis: Stimulating Innovation: Tax Credits for Firms vs. Tax Incentives for Inventors.</li>
               </ul>")
             ),
-         timelineStart()
+        timelineLabel(2014),
+        timelineStart()
       )
     )
   ))

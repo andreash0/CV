@@ -8,7 +8,8 @@ modContant = function(id) {
       solidHeader = TRUE,
       closable = FALSE,
       width = 12,
-      height = 530,
+      elevation = 2,
+      #height = 480,
       title = "Contact",
       cardProfile(
         src = "githubbild.jpg",
@@ -23,10 +24,6 @@ modContant = function(id) {
           cardProfileItem(
             title = icon("linkedin"),
             description = a("Andreas Hofheinz", href="https://linkedin.com/in/andreas-hofheinz-3b686913b/", class = "float-right") 
-          ),
-          cardProfileItem(
-            title = icon("map-marker-alt"),
-            description = "Munich, Germany"
           ),
           cardProfileItem(
             title = icon("futbol"),

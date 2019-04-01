@@ -2,6 +2,7 @@ library(shiny)
 library(bs4Dash)
 library(shinydashboardPlus)
 library(plotly)
+library(shinycssloaders)
 
 source("modules/modContact.R")
 source("modules/modExpEdu.R")
@@ -43,15 +44,34 @@ shiny::shinyApp(
     ),
     body = bs4DashBody(
       includeCSS("styles.css"),
-        fluidRow(column(width= 5,
-
-          modContant("idModCont"), 
-         modSkills("idModSkills")
+      fluidRow(
+        height = 800,
+        column(width= 5,
+          fluidRow(
+            style = "height:520px; 
+              margin-left: 10px;
+              margin-top: 10px;", 
+            modContant("idModCont")
+          ), 
+          fluidRow(
+            style = "height:520px; 
+            margin-left: 10px;
+            margin-top: 10px;", 
+            modSkills("idModSkills")
+          )
         ),
-      column(width= 6,
-          modExpEdu("idmModExpEdu")
+        column(
+          width= 7,
+          fluidRow(
+            style = "height:1050px; 
+            margin-left: 10px;
+            margin-top: 10px;", 
+            modExpEdu("idmModExpEdu")
+          )
+          
+        )
       )
-    ))
+    )
 
   ),
   server = function(input, output) {
