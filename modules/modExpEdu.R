@@ -20,29 +20,31 @@ modExpEdu = function(id) {
             title = "Co-Founder at Gandenberger Peter & Hofheinz Andreas GbR - IT consultancy",
             icon = "rocket",
             time = "April 2018",
-            HTML("<ul>
-                  <li>IT consultancy enabling customers to transform raw data into meaningful insights using modern techniques and approaches.</li>
-                  <li>Based in Munich, Germany.</li>
-                  </ul>")
+            HTML('
+              <ul>
+                <li>IT consultancy enabling customers to transform raw data into meaningful insights using modern techniques and approaches.</li>
+                <li>Based in Munich, Germany.</li>
+              </ul>')
           ),
           timelineItem(
             title = "Project: Planning tool for marketing campaigns for Allianz Deutschland AG",
             time = "2018",
-            div(class = "test", HTML("<ul>
-                  <li>Development and programming of a BI-Tool, to enable a simplified and flexible sales planning process. 
-                      The tool makes it easy to create and edit a diverse range of sales / marketing campaigns</li>
-                  <li>Creation of a comprehensive dashboard which allows users to obtain a clear and flexible overview of the KPIs 
-                      within the marketing campaigns.</li>
-                  </ul>")
-            )
+            HTML('
+              <ul>
+                <li>Development and programming of a BI-Tool, to enable a simplified and flexible sales planning process. 
+                    The tool makes it easy to create and edit a diverse range of sales / marketing campaigns</li>
+                <li>Creation of a comprehensive dashboard which allows users to obtain a clear and flexible overview of the KPIs 
+                    within the marketing campaigns.</li>
+              </ul>')
           ),
           timelineItem(
             title = "Student Assistant for Data Analytics and Machine Learning at LMU Munich",
             icon = "university",
             time = "2018-2019",
-            HTML('<ul>
-              <li>Collaboration in the creation and maintenance of the 
-              <a href="https://cran.r-project.org/web/packages/fxtract/index.html">fxtract</a> R-Package.</li>
+            HTML('
+              <ul>
+                <li>Collaboration in the creation and maintenance of the 
+                <a href="https://cran.r-project.org/web/packages/fxtract/index.html">fxtract</a> R-Package.</li>
               </ul>')
           ),
           timelineLabel("2018"),
@@ -50,13 +52,35 @@ modExpEdu = function(id) {
             title = "Internship in IT Risk Assurance/ Data Analytics at Ernst & Young GmbH",
             icon = "building",
             time = "2017-2018",
-            HTML('<ul>
-              <li>Development of a neural network with Python / Tensorflow </li>
-              <li>Research on the topic Data Quality Management and preparation of the informations </li>
-              <li>Research with regards to new Data Analytics technologies </li>
-            </ul>')
+            HTML('
+              <ul>
+                <li>Development of a neural network with Python / Tensorflow </li>
+                <li>Research on the topic Data Quality Management and preparation of the informations </li>
+                <li>Research with regards to new Data Analytics technologies </li>
+              </ul>')
           ),
-          timelineLabel(""),
+          timelineLabel("2017"),
+          timelineItem(
+            title = "Working Student in CRM at Allianz Deutschland AG",
+            icon = "building",
+            time = "2017",
+            HTML('
+              <ul>
+                <li> Bulding a master planning excel tool by using VBA for Excel and Power Point, Pivot Tables, etc. </li>
+                <li> Development of a macro for the automatic filling of MS Power Point presentations based on data in MS Excel </li>
+              </ul>')
+            ),
+          timelineItem(
+            title = "Working Student in Risk Management at AMOS SE",
+            icon = "building",
+            time = "2016-2017",
+            HTML('
+              <ul>
+                <li>Optimization of Processes and Templates by using VBA </li>
+                <li>Modeling, Development, and Implementation of an End-to-End Risk-Database by using MS Access and VBA </li>
+              </ul>')
+            ),
+          timelineLabel("2016"),
           timelineStart()
         )
       ),
