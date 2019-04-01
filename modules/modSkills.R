@@ -2,27 +2,55 @@ modSkills = function(id) {
   
   ns <- NS(id)
   
-  bs4Card(
-    status = "primary",
-    solidHeader = TRUE,
-    closable = FALSE,
-    width = 12,
+  bs4TabCard(
+    title = "Skills",
     elevation = 2,
-    title = "IT Skills",
-    plotlyOutput(ns("skills_plot"), height = 250)
+    width = 12,
+    status = "primary",
+    solidHeader = T,
+    side = "right",
+    bs4TabPanel(
+      status = "primary",
+      tabName = "IT",
+      solidHeader = TRUE,
+      closable = FALSE,
+      width = 12,
+      elevation = 2,
+      active = T,  
+      plotlyOutput(ns("itSkillsPlot"), height = 250)
+    ),
+    bs4TabPanel(
+      status = "primary",
+      tabName = "Softskills",
+      solidHeader = TRUE,
+      closable = FALSE,
+      width = 12,
+      elevation = 2,
+      plotlyOutput(ns("softSkillsPlot"), height = 250)
+    )#,
+    # bs4TabPanel(
+    #   status = "primary",
+    #   tabName = "Languages",
+    #   solidHeader = TRUE,
+    #   closable = FALSE,
+    #   width = 12,
+    #   elevation = 2,
+    #   plotlyOutput(ns("skills_plot"), height = 250)
+    # )
   )
 
 }
 
 modSkills_server <- function(input, output, session) {
   
-  # Scatterpolar
-  output$skills_plot = renderPlotly({
-
+  # Scatterpolars
+  
+  ### IT
+  output$itSkillsPlot = renderPlotly({
     p <- plot_ly(
       type = 'scatterpolar',
-      r = c(9, 6, 7,  7, 5, 8,  4, 8),
-      theta = c('MS Office','Tableau','Relational Databases', 'SQL', 'Python', 'VBA', 'Web Development', 'R'),
+      r = c(9, 6, 7,  8, 5, 8,  4, 8),
+      theta = c('MS Office','  Tableau','Relational Databases', 'SQL', 'Python', 'VBA', 'Web Development', 'R'),
       fill = 'toself',
       mode = "markers"
     ) %>%
@@ -36,7 +64,36 @@ modSkills_server <- function(input, output, session) {
         showlegend = F
       ) %>% 
       config(displayModeBar = F)
-    
+  })
+  
+  ### Softskills
+  output$softSkillsPlot = renderPlotly({
+    p <- plot_ly(
+      type = 'scatterpolar',
+      r = c(9, 7, 7,  8, 7, 8,  8, 9),
+      theta = c(
+        'Analytical thinking',
+        '           Time\n               management',
+        'Communication', 
+        'Task and       \n goal       \n oriented         ', 
+         'Entrepreneurship', 
+        'Problem       \n solving      ', 
+        'Quick learner', 
+        '       Teamwork'
+      ),
+      fill = 'toself',
+      mode = "markers"
+    ) %>%
+      layout(
+        polar = list(
+          radialaxis = list(
+            visible = T,
+            range = c(0,10)
+          )
+        ),
+        showlegend = F
+      ) %>% 
+      config(displayModeBar = F)
   })
   
 
