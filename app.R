@@ -75,10 +75,25 @@ shiny::shinyApp(
           )
         ),
         bs4TabItem("tabCode",
-          tags$h4("You can find the code for this app on my github account")
+          
+          bs4Jumbotron(),
+          
+          div(class = "myInfoBox",
+            bs4InfoBox(
+              class = "myInfoBoxContent",
+              title = HTML(
+                '<ul>
+                You can find the code for this app on my github
+                <a href="https://github.com/andreasho95/CV">account</a> ! 
+                </ul>'
+              ),
+              icon = "github"
+            )
+          )  
         )
       )
     )
+        
   ),
   server = function(input, output) {
     callModule(modSkills_server, "idModSkills")
