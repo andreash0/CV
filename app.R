@@ -9,15 +9,13 @@ shiny::shinyApp(
     controlbar_collapsed = TRUE,
     title = "Basic Dashboard",
     navbar = bs4DashNavbar(
-
+      controlbarIcon = ""
     ),
     sidebar = bs4DashSidebar(
       skin = "light",
       status = "primary",
-      title = "bs4Dash",
+      title = "CV with R Shiny",
       brandColor = "primary",
-      url = "https://www.google.fr",
-      src = "https://adminlte.io/themes/AdminLTE/dist/img/user2-160x160.jpg",
       elevation = 3,
       opacity = 0.8,
       bs4SidebarUserPanel(

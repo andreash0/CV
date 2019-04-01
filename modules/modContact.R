@@ -2,12 +2,10 @@ modContant = function(id) {
 
   ns <- NS(id)
   
-
-  
   tagList(
     bs4Card(
       status = "primary",
-      width = 3,
+      width = 4,
       solidHeader = TRUE,
       closable = FALSE,
       title = "Contact",
@@ -32,14 +30,5 @@ modContant = function(id) {
         )
       )
     )
-  #   bs4UserCard(
-  #     type = 2,
-  #     src = "githubbild.jpg",
-  #     status = "primary",
-  #     imageElevation = 4,
-  #     title = "Andreas Hofheinz",
-  #     subtitle = "Co-Founder Gandenberger Peter & Hofheinz Andreas GbR",
-  #     "bla bla"
-  #   )
   )
 }
