@@ -29,6 +29,7 @@ modExpEdu = function(id) {
           timelineItem(
             title = "Project: Planning tool for marketing campaigns for Allianz Deutschland AG",
             time = "2018",
+            icon = "rocket",
             HTML('
               <ul>
                 <li>Development and programming of a BI-Tool, to enable a simplified and flexible sales planning process. 
@@ -80,8 +81,7 @@ modExpEdu = function(id) {
                 <li>Modeling, Development, and Implementation of an End-to-End Risk-Database by using MS Access and VBA </li>
               </ul>')
             ),
-          timelineLabel("2016"),
-          timelineStart()
+          timelineStart(icon = "")
         )
       ),
       bs4TabPanel(
@@ -127,8 +127,7 @@ modExpEdu = function(id) {
               <li>Thesis: Stimulating Innovation: Tax Credits for Firms vs. Tax Incentives for Inventors.</li>
               </ul>")
             ),
-        timelineLabel(2014),
-        timelineStart()
+        timelineStart(icon = "")
       )
     )
   ))

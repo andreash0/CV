@@ -27,16 +27,16 @@ modSkills = function(id) {
       width = 12,
       elevation = 2,
       plotlyOutput(ns("softSkillsPlot"), height = 250)
-    )#,
-    # bs4TabPanel(
-    #   status = "primary",
-    #   tabName = "Languages",
-    #   solidHeader = TRUE,
-    #   closable = FALSE,
-    #   width = 12,
-    #   elevation = 2,
-    #   plotlyOutput(ns("skills_plot"), height = 250)
-    # )
+    ),
+    bs4TabPanel(
+      status = "primary",
+      tabName = "Languages",
+      solidHeader = TRUE,
+      closable = FALSE,
+      width = 12,
+      elevation = 2,
+      plotlyOutput(ns("langSkillsPlot"), height = 250)
+    )
   )
 
 }
@@ -81,6 +81,27 @@ modSkills_server <- function(input, output, session) {
         'Quick learner', 
         '       Teamwork'
       ),
+      fill = 'toself',
+      mode = "markers"
+    ) %>%
+      layout(
+        polar = list(
+          radialaxis = list(
+            visible = T,
+            range = c(0,10)
+          )
+        ),
+        showlegend = F
+      ) %>% 
+      config(displayModeBar = F)
+  })
+  
+  ### Languages
+  output$langSkillsPlot = renderPlotly({
+    p <- plot_ly(
+      type = 'scatterpolar',
+      r = c(10, 8, 4),
+      theta = c('German', 'English', 'French'),
       fill = 'toself',
       mode = "markers"
     ) %>%

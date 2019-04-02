@@ -79,7 +79,7 @@ shiny::shinyApp(
             HTML(
               'You can find the code for this shiny app on my github
                 <a href="https://github.com/andreasho95/CV"" style="color:blue;">account</a><br>
-               You are welcome to use and customize it!
+               Feel free to use and customize it!
               '
             ),
             status = "success",
