@@ -22,7 +22,8 @@ modContant = function(id) {
           ),
           cardProfileItem(
             title = icon("linkedin"),
-            description = a("Andreas Hofheinz", href="https://linkedin.com/in/andreas-hofheinz-3b686913b/", class = "float-right") 
+            description = a("Andreas Hofheinz", href="https://linkedin.com/in/andreas-hofheinz-3b686913b/", 
+              class = "float-right") 
           ),
           cardProfileItem(
             title = icon("futbol"),

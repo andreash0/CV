@@ -70,7 +70,7 @@ modExpEdu = function(id) {
                 <li> Bulding a master planning excel tool by using VBA for Excel and Power Point, Pivot Tables, etc. </li>
                 <li> Development of a macro for the automatic filling of MS Power Point presentations based on data in MS Excel </li>
               </ul>')
-            ),
+          ),
           timelineItem(
             title = "Working Student in Risk Management at AMOS SE",
             icon = "building",
@@ -80,7 +80,7 @@ modExpEdu = function(id) {
                 <li>Optimization of Processes and Templates by using VBA </li>
                 <li>Modeling, Development, and Implementation of an End-to-End Risk-Database by using MS Access and VBA </li>
               </ul>')
-            ),
+          ),
           timelineStart(icon = "")
         )
       ),
@@ -106,7 +106,7 @@ modExpEdu = function(id) {
                     <li>Time Series Analysis</li>
                   </ul>
               </ul>")
-            ),
+          ),
           timelineLabel(2017),
           timelineItem(
             title = "Visiting Scholar for Data Science at the University of Illinois at Urbana-Champaign, USA",
@@ -118,7 +118,7 @@ modExpEdu = function(id) {
               <li>Statistical Analysis of Experimental Data</li>
               </ul>')
           ),
-        timelineItem(
+          timelineItem(
             title = "Bachelor of Science in Economics at LMU Munich",
             time = "2014-2017",
             icon = "university",
@@ -126,9 +126,10 @@ modExpEdu = function(id) {
               <li>Emphasis on Econometrics, Statistics, Innovation and Labor Markets.</li>
               <li>Thesis: Stimulating Innovation: Tax Credits for Firms vs. Tax Incentives for Inventors.</li>
               </ul>")
-            ),
-        timelineStart(icon = "")
+          ),
+          timelineStart(icon = "")
+        )
       )
     )
-  ))
+  )
 }

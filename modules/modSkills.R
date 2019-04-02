@@ -71,6 +71,7 @@ modSkills_server <- function(input, output, session) {
     p <- plot_ly(
       type = 'scatterpolar',
       r = c(9, 7, 7,  8, 7, 8,  8, 9),
+      # Workaround for moving labels
       theta = c(
         'Analytical thinking',
         '           Time\n               management',

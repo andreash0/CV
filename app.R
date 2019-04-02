@@ -57,8 +57,8 @@ shiny::shinyApp(
               ), 
               fluidRow(
                 style = "height:480px; 
-                margin-left: 10px;
-                margin-top: 10px;", 
+                  margin-left: 10px;
+                  margin-top: 10px;", 
                 modSkills("idModSkills")
               )
             ),
@@ -66,11 +66,10 @@ shiny::shinyApp(
               width= 7,
               fluidRow(
                 style = "height:1060px; 
-                margin-left: 10px;
-                margin-top: 10px;", 
+                  margin-left: 10px;
+                  margin-top: 10px;", 
                 modExpEdu("idmModExpEdu")
               )
-              
             )
           )
         ),
