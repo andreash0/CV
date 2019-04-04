@@ -1,4 +1,4 @@
-modExpEdu = function(id) {
+modExpEduAH = function(id) {
   
   ns <- NS(id)
   

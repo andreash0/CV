@@ -4,9 +4,12 @@ library(shinydashboardPlus)
 library(plotly)
 library(shinycssloaders)
 
-source("modules/modContact.R")
-source("modules/modExpEdu.R")
-source("modules/modSkills.R")
+source("modules/modContactPG.R")
+source("modules/modExpEduPG.R")
+source("modules/modSkillsPG.R")
+source("modules/modContactAH.R")
+source("modules/modExpEduAH.R")
+source("modules/modSkillsAH.R")
 
 
 shiny::shinyApp(
@@ -31,8 +34,13 @@ shiny::shinyApp(
       bs4SidebarMenu(
         bs4SidebarHeader("Header 1"),
         bs4SidebarMenuItem(
-          "CV",
-          tabName = "tabCV",
+          "Andreas Hofheinz",
+          tabName = "tabCVAH",
+          icon = "id-card"
+        ),
+        bs4SidebarMenuItem(
+          "Peter Gandenberger",
+          tabName = "tabCVPG",
           icon = "id-card"
         ),
         bs4SidebarMenuItem(
@@ -45,7 +53,7 @@ shiny::shinyApp(
     body = bs4DashBody(
       includeCSS("styles.css"),
       bs4TabItems(
-        bs4TabItem("tabCV",
+        bs4TabItem("tabCVAH",
           fluidRow(
             height = 800,
             column(width= 5,
@@ -53,13 +61,13 @@ shiny::shinyApp(
                 style = "height:560px; 
                   margin-left: 10px;
                   margin-top: 10px;", 
-                modContant("idModCont")
+                modContantAH("idModContAH")
               ), 
               fluidRow(
                 style = "height:480px; 
                   margin-left: 10px;
                   margin-top: 10px;", 
-                modSkills("idModSkills")
+                modSkillsAH("idModSkillsAH")
               )
             ),
             column(
@@ -68,10 +76,38 @@ shiny::shinyApp(
                 style = "height:1060px; 
                   margin-left: 10px;
                   margin-top: 10px;", 
-                modExpEdu("idmModExpEdu")
+                modExpEduAH("idModExpEduAH")
               )
             )
           )
+        ),
+        bs4TabItem("tabCVPG",
+                   fluidRow(
+                     height = 800,
+                     column(width= 5,
+                            fluidRow(
+                              style = "height:560px; 
+                  margin-left: 10px;
+                  margin-top: 10px;", 
+                              modContantPG("idModContPG")
+                            ), 
+                            fluidRow(
+                              style = "height:480px; 
+                  margin-left: 10px;
+                  margin-top: 10px;", 
+                              modSkillsPG("idModSkillsPG")
+                            )
+                     ),
+                     column(
+                       width= 7,
+                       fluidRow(
+                         style = "height:1060px; 
+                  margin-left: 10px;
+                  margin-top: 10px;", 
+                         modExpEduPG("idModExpEduPG")
+                       )
+                     )
+                   )
         ),
         bs4TabItem("tabCode",
           bs4Callout(
@@ -90,6 +126,7 @@ shiny::shinyApp(
         
   ),
   server = function(input, output) {
-    callModule(modSkills_server, "idModSkills")
+    callModule(modSkills_serverAH, "idModSkillsAH")
+    callModule(modSkills_serverPG, "idModSkillsPG")
   }
 )
