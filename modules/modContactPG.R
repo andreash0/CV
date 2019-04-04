@@ -1,4 +1,4 @@
-modContant = function(id) {
+modContantPG = function(id) {
 
   ns <- NS(id)
   
@@ -11,23 +11,23 @@ modContant = function(id) {
       elevation = 2,
       title = "Contact",
       cardProfile(
-        src = "githubbild.jpg",
-        title = "Andreas Hofheinz",
+        src = "ppPG.jpg",
+        title = "Peter Gandenberger",
         subtitle = div(HTML("Co-Founder <br> Gandenberger Peter & Hofheinz Andreas GbR"), class="center-div"),
         cardProfileItemList(
           bordered = TRUE,
           cardProfileItem(
             title = icon("envelope"),
-            description = "andreas.hofheinz@outlook.com"
+            description = "peter.gandenberger@gmail.com"
           ),
           cardProfileItem(
             title = icon("linkedin"),
-            description = a("Andreas Hofheinz", href="https://linkedin.com/in/andreas-hofheinz-3b686913b/", 
+            description = a("Peter Gandenberger", href="https://www.linkedin.com/in/peter-gandenberger-a7a2ba172/", 
               class = "float-right") 
           ),
           cardProfileItem(
-            title = icon("futbol"),
-            description = "Football, Swimming, Traveling, Reading"
+            title = icon("chess"),
+            description = "Football, Chess, Reading"
           )
         )
       )

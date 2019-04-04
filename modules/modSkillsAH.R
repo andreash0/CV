@@ -1,4 +1,4 @@
-modSkills = function(id) {
+modSkillsAH = function(id) {
   
   ns <- NS(id)
   
@@ -41,7 +41,7 @@ modSkills = function(id) {
 
 }
 
-modSkills_server <- function(input, output, session) {
+modSkills_serverAH <- function(input, output, session) {
   
   # Scatterpolars
   
