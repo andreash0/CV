@@ -41,19 +41,33 @@ modExpEduPG = function(id) {
           timelineItem(
             title = "Working Student at CQSE GmbH",
             icon = "university",
-            time = "2018"
+            time = "2018",
+            HTML('
+                 <ul>
+                  <li> Testing and development of project features for the Teamscale project</li>
+                 </ul>')
           ),
           timelineLabel("2018"),
           timelineItem(
             title = "Working Student at Der IT-Macher",
             icon = "building",
-            time = "2016-2017"
+            time = "2016-2017",
+            HTML('
+                 <ul>
+                 <li> Creation of a mobile Customer to Business communication application</li>
+                 </ul>')
           ),
           timelineLabel("2016"),
           timelineItem(
             title = "Working Student at QAware GmbH",
             icon = "building",
-            time = "2013-2015"
+            time = "2013-2015",
+            HTML('
+                 <ul>
+                 <li> Creation of automated tests </li>
+                 <li> Implementation of quality measures for improving code quality</li>
+                 <li> Development of project features for different customers (ALDI Sued, Deutsche Telekom)</li>
+                 </ul>')
           ),
           timelineStart(icon = "")
         )
